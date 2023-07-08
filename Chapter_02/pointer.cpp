@@ -1,5 +1,25 @@
 #include <iostream>
 
+void copy_fct()
+{
+    int v1[10] = {0,1,2,3,4,5,6,7,8,9};
+    int v2[10];
+
+    for (auto i = 0; i != 10; ++i)
+        v2[i] = v1[i];
+}
+
+void print()
+{
+    int v[] = {0,1,2,3,4,5,6,7,8,9};
+
+    for (auto x : v)
+        std::cout << x << '\n';
+
+    for (auto x : {10,21,32,43,54,65})
+        std::cout << x << '\n';
+}
+
 int main()
 {
     // q: ここでは何していますか
@@ -22,4 +42,7 @@ int main()
     //    このため、ポインタpは、char型の配列vの3番目の要素からchar型の配列vの0番目の要素までのサイズの倍数でないため、
     //    ポインタの減算は、ポインタの指すオブジェクトの型のサイズの倍数である必要があるため、ポインタの減算はできません。
     std::cout << x << std::endl;
+
+    copy_fct();
+    print();
 }
